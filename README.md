@@ -1,7 +1,7 @@
-## Trie based inverted index
+# Trie based inverted index
 
 
-### Install Requirements and Elastic Search
+## Install Requirements and Elastic Search
 
 ```bash
 pip3 install -r requirements.txt
@@ -9,7 +9,7 @@ docker pull docker.elastic.co/elasticsearch/elasticsearch:7.10.0
 ```
 
 
-### Download required nltk data and load the elastic engine
+## Download required nltk data and load the elastic engine
 
 **Open two terminals**
 
@@ -20,13 +20,13 @@ docker pull docker.elastic.co/elasticsearch/elasticsearch:7.10.0
    python3 initialize.py
    ```
 
-### To do search on Trie Search Engine
+## To do search on Trie Search Engine
 
 ```bash
 python3 main.py
 ```
 
-### To compare Elastic ansd Trie Search Engine
+## To compare Elastic ansd Trie Search Engine
 
 **Make sure SHOW_DETAIL is set to True in config file before running this**
 
@@ -34,7 +34,7 @@ python3 main.py
 python3 search.py
 ```
 
-### To benchmark the Trie Search Engine
+## To benchmark the Trie Search Engine
 
 **Make sure SHOW_DETAIL is set to True in config file before running this**
 
@@ -43,7 +43,7 @@ python3 benchmark.py
 ```
 
 
-### How to change configuration
+## How to change configuration
 
 Go to config.py in config directory.
 
@@ -60,3 +60,17 @@ Go to config.py in config directory.
  - REMOVE_STOP_WORDS = Boolean (True or False), If you want to remove specified stopwords
  - STOP_WORDS = set of tokens which won't we considered for indexing or for running query if REMOVE_STOP_WORDS is true
 
+
+## TO DO
+
+- [x] Insert CSV type doc into the search engine
+- [ ] Able to insert any type of text file into the search engine
+- [x] Comparision with Elastic Search
+- [ ] Create server-client type search engine
+- [ ] Create mulitple node to handle multiple requests
+- [ ] Move the server code to c++ instead of python3
+- [ ] Use python for client side code
+- [x] Rank the search using cosine similarity and match score
+- [x] Handle wildcard query
+- [x] Handle spell-check
+- [ ] Give option to chose corrected spelling error
